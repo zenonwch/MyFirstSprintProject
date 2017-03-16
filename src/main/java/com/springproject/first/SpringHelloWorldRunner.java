@@ -12,7 +12,9 @@ public class SpringHelloWorldRunner {
     public static void main(final String[] args) {
         final ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         final SpringHelloWorld helloWorld = (SpringHelloWorld) ctx.getBean("springHelloWorld");
+        final SpringHelloWorld init = (SpringHelloWorld) ctx.getBean("withInit");
         helloWorld.getMessage();
+        init.getMessage();
     }
 
     // FileSystemXmlApplicationContext
