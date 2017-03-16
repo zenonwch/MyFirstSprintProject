@@ -6,4 +6,6 @@
     <!-- Bean with scope: singleton -->
     <bean id="singletonBean" class="main.java.com.springproject.scope.Message" scope="singleton"></bean>
 
+    <!-- Bean with scoope: prototype -->
+    <bean id="prototypeBean" class="main.java.com.springproject.scope.Message" scope="prototype"></bean>
 </beans>
