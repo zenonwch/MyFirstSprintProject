@@ -3,8 +3,24 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- Normal bean -->
     <bean id="springHelloWorld" class="main.java.com.springproject.first.SpringHelloWorld">
         <property name="message" value="Hello World!"/>
+    </bean>
+
+    <!-- Bean with lazy initialization -->
+    <bean id="lazyBean" class="main.java.com.springproject.first.SpringHelloWorld" lazy-init="true">
+        <property name="message" value="Lazy initialization"/>
+    </bean>
+
+    <!-- Bean with init-method -->
+    <bean id="withInit" class="main.java.com.springproject.first.SpringHelloWorld" init-method="getMessage">
+        <property name="message" value="Init method"/>
+    </bean>
+
+    <!-- Bean with destroy-method -->
+    <bean id="withDestroy" class="main.java.com.springproject.first.SpringHelloWorld" destroy-method="getMessage">
+        <property name="message" value="Destroy method"/>
     </bean>
 
 </beans>
